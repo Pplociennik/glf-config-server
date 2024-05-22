@@ -16,7 +16,7 @@ spring:
           clone-on-start: true
           force-pull: true
           username: pplociennik
-          password: "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"
+          password: "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"
 
   rabbitmq:
     host: "localhost"
@@ -29,3 +29,11 @@ management:
     web:
       exposure:
         include: "*"
+  health:
+    liveness-state:
+      enabled: true
+    readiness-state:
+      enabled: true
+  endpoint:
+    health:
+      enabled: true
