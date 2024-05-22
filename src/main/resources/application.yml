@@ -1,0 +1,31 @@
+server:
+  port: 8071
+
+spring:
+  application:
+    name: configserver
+
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/Pplociennik/glf-config.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+          username: pplociennik
+          password: "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"
+
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
