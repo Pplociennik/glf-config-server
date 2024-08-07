@@ -18,12 +18,6 @@ spring:
           username: pplociennik
           password: "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"
 
-  rabbitmq:
-    host: "localhost"
-    port: 5672
-    username: "guest"
-    password: "guest"
-
 management:
   endpoints:
     web:
