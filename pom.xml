@@ -16,6 +16,7 @@
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <version.maven-exec-plugin>3.0.0</version.maven-exec-plugin>
     </properties>
     <dependencies>
         <dependency>
@@ -74,8 +75,29 @@
                             <destFileName>configserver.jar</destFileName>
                         </artifactItem>
                     </artifactItems>
-                    <outputDirectory>../docker/configserver</outputDirectory>
+                    <outputDirectory>${project.basedir}/docker</outputDirectory>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>${version.maven-exec-plugin}</version>
+                <executions>
+                    <execution>
+                        <id>run-bat-file</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>cmd</executable>
+                            <arguments>
+                                <argument>/c</argument>
+                                <argument>${project.basedir}/docker/build.bat</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
