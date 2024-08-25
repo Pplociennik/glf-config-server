@@ -78,7 +78,7 @@
                             <destFileName>configserver.jar</destFileName>
                         </artifactItem>
                     </artifactItems>
-                    <outputDirectory>../../docker/configserver</outputDirectory>
+                    <outputDirectory>../docker/configserver</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
