@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.goaleaf</groupId>
-    <artifactId>configserver</artifactId>
+    <artifactId>glf-configserver</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>configserver</name>
+    <name>glf-configserver</name>
     <description>configserver</description>
     <properties>
         <java.version>17</java.version>
@@ -87,7 +87,7 @@
                                     <version>${project.version}</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
-                                    <destFileName>configserver.jar</destFileName>
+                                    <destFileName>glf-configserver.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
                             <outputDirectory>${project.basedir}/docker</outputDirectory>

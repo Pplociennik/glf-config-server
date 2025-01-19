@@ -1,5 +1,5 @@
 FROM openjdk:17.0.2-jdk
-ARG JAR_FILE=docker/configserver.jar
+ARG JAR_FILE=docker/glf-configserver.jar
 
 # Install curl using microdnf
 RUN microdnf install -y curl
