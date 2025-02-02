@@ -32,3 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 /docker/configserver.jar
+/docker/glf-configserver.jar
