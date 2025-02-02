@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: configserver
+    name: "configserver"
 
 
   cloud:
@@ -37,3 +37,7 @@ management:
   endpoint:
     health:
       enabled: true
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
