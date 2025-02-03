@@ -93,6 +93,18 @@
                                     <goal>copy</goal>
                                 </goals>
                             </execution>
+                            <execution>
+                                <id>copy-opentelemetry</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <includeArtifactIds>opentelemetry-javaagent</includeArtifactIds>
+                                    <includeTypes>jar</includeTypes>
+                                    <outputDirectory>${project.basedir}/docker</outputDirectory>
+                                </configuration>
+                            </execution>
                         </executions>
                         <configuration>
                             <artifactItems>
@@ -102,7 +114,7 @@
                                     <version>${project.version}</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>
-                                    <destFileName>glf-configserver.jar</destFileName>
+                                    <destFileName>configserver.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
                             <outputDirectory>${project.basedir}/docker</outputDirectory>

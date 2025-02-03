@@ -33,3 +33,4 @@ build/
 .vscode/
 /docker/configserver.jar
 /docker/glf-configserver.jar
+/docker/opentelemetry-javaagent-2.12.0.jar
