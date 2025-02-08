@@ -10,13 +10,10 @@ spring:
     config:
       server:
         git:
-          uri: "https://github.com/Pplociennik/glf-config.git"
           default-label: main
           timeout: 5
           clone-on-start: true
           force-pull: true
-          username: pplociennik
-          password: "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"
 
 info:
   app:
