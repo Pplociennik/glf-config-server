@@ -4,8 +4,6 @@ server:
 spring:
   application:
     name: "configserver"
-  profiles:
-    active: "@spring.profiles.active@"
   cloud:
     config:
       server:
@@ -15,14 +13,14 @@ spring:
           clone-on-start: true
           force-pull: true
 
-logging:
-  level:
-    com:
-      goaleaf:
-        configserver: DEBUG
-
 info:
   app:
     name: "@project.name@"
     description: "@project.description@"
     version: "@project.version@"
+
+logging:
+  level:
+    com:
+      goaleaf:
+        configserver: DEBUG
